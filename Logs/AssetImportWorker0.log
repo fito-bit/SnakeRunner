@@ -2256,3 +2256,69 @@ System memory in use after: 39.6 MB.
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1826.
 Total: 2.312300 ms (FindLiveObjects: 0.245800 ms CreateObjectMapping: 0.099000 ms MarkObjects: 1.909500 ms  DeleteObjects: 0.055400 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000682 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.641 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1128 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.8 MB.
+System memory in use after: 61.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1829.
+Total: 2.128900 ms (FindLiveObjects: 0.217600 ms CreateObjectMapping: 0.086800 ms MarkObjects: 1.750800 ms  DeleteObjects: 0.072200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000820 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.443 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1128 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.8 MB.
+System memory in use after: 61.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1832.
+Total: 2.378900 ms (FindLiveObjects: 0.410900 ms CreateObjectMapping: 0.095100 ms MarkObjects: 1.794900 ms  DeleteObjects: 0.075700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 39.5 MB.
+System memory in use after: 39.6 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1832.
+Total: 2.311900 ms (FindLiveObjects: 0.245800 ms CreateObjectMapping: 0.086800 ms MarkObjects: 1.915700 ms  DeleteObjects: 0.061900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 823.260542 seconds.
+  path: Assets/Scripts/Menu.cs
+  artifactKey: Guid(6e5bf9633a9a55c4cb50eeefcde89839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Menu.cs using Guid(6e5bf9633a9a55c4cb50eeefcde89839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fc75dc9d72d9d542874c06d8d15c26e') in 0.009149 seconds
+  Import took 0.011822 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
