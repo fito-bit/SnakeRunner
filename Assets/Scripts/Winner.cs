@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class Winner : MonoBehaviour
 {
+    [SerializeField]private Manager manager;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Time.timeScale = 0;
-            Destroy(other.gameObject);
+            manager.Winner();
         }
     }
 }

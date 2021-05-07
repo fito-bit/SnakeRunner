@@ -15,11 +15,16 @@ public class Snake : MonoBehaviour
     private float dis;
     private Transform curBodyPart;
     private Transform PrevBodyPart;
+    public Color color;
+    private Manager manager;
+    public bool isFever=false;
+    public GameObject head;
 
-    
+
 
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager>();
         for (int i = 0; i < beginSize - 1; i++)
         {
             AddBodyPart();
@@ -51,9 +56,12 @@ public class Snake : MonoBehaviour
         }
     }
 
-    public void AddBodyPart() {
-
-        Transform newPart = (Instantiate (bodyPrefabs, bodyParts[bodyParts.Count - 1].position, bodyParts[bodyParts.Count - 1].rotation) as GameObject).transform;
+    public void AddBodyPart()
+    {
+        GameObject obj=Instantiate(bodyPrefabs, bodyParts[bodyParts.Count - 1].position,
+            bodyParts[bodyParts.Count - 1].rotation) as GameObject;
+        obj.GetComponent<Movement>().meshRenderer.material.color = manager.currentColor;
+        Transform newPart = obj.transform;
         newPart.SetParent(transform);
         bodyParts.Add(newPart);
     }

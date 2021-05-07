@@ -8,6 +8,9 @@ TagManager:
   - Human
   - Obstacle
   - Manager
+  - Part
+  - Snake
+  - Cone
   layers:
   - Default
   - TransparentFX

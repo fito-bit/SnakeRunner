@@ -9,6 +9,7 @@ public class PlayerFollow : MonoBehaviour
 
     void Update()
     {
-        transform.position =new Vector3(0,transform.position.y,player.transform.position.z+offset.z); 
+        if(StaticValues.gameState==GameState.Playing)
+            transform.position =new Vector3(0,transform.position.y,player.transform.position.z+offset.z); 
     }
 }
