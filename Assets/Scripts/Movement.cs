@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
                     {
                         transform.Translate(-2 * speed * Time.deltaTime, 0, speed * Time.deltaTime);
                     }
-                    else
+                    else if (targetPosition.x > transform.position.x)
                     {
                         transform.Translate(2 * speed * Time.deltaTime, 0, speed * Time.deltaTime);
                     }
