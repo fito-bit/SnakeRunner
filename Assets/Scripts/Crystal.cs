@@ -23,7 +23,7 @@ public class Crystal : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             gameManager.UpdateCrystals();
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 

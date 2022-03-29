@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour
         {
             if (other.gameObject.GetComponentInParent<Snake>().isFever)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
             else
             {

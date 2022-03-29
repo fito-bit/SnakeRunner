@@ -21,7 +21,7 @@ public class Human : MonoBehaviour
             if (other.GetComponent<Movement>().meshRenderer.material.color == meshRenderer.material.color||other.gameObject.GetComponentInParent<Snake>().isFever)
             {
                 gameManager.UpdateHumans();
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
             else
             {

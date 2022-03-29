@@ -10,17 +10,13 @@ public class Snake : MonoBehaviour
     public float minDistance = 0.25f;
     public int beginSize;
     public float speed = 1;
-    public float rotationSpeed = 50;
     public GameObject bodyPrefabs;
     private float dis;
     private Transform curBodyPart;
     private Transform PrevBodyPart;
-    public Color color;
     private Manager manager;
     public bool isFever=false;
     public GameObject head;
-
-
 
     void Start()
     {

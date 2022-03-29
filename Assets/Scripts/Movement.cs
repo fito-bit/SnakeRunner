@@ -17,12 +17,27 @@ public class Movement : MonoBehaviour
         targetPosition = transform.position;
     }
 
+    void Move(int direction)
+    {
+        transform.Translate(2*direction * speed * Time.deltaTime, 0, speed * Time.deltaTime);
+    }
+
     void Update()
     {
         if (StaticValues.gameState == GameState.Playing && isHead)
         {
             if (!snakeScript.isFever)
             {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hit;
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        targetPosition = hit.point;
+                    }
+                }
+                
                 if (Math.Abs(transform.position.x-targetPosition.x)<=0.01f)
                 {
                     transform.Translate(0, 0, speed * Time.deltaTime);
@@ -31,33 +46,13 @@ public class Movement : MonoBehaviour
                 {
                     if (targetPosition.x < transform.position.x)
                     {
-                        transform.Translate(-2 * speed * Time.deltaTime, 0, speed * Time.deltaTime);
+                        Move(-1);
                     }
                     else if (targetPosition.x > transform.position.x)
                     {
-                        transform.Translate(2 * speed * Time.deltaTime, 0, speed * Time.deltaTime);
+                        Move(1);
                     }
                 }
-                
-                if (Input.touchCount > 0)
-                {
-                    Touch touch = Input.GetTouch(0);
-                    Ray ray = Camera.main.ScreenPointToRay(touch.position);
-                    RaycastHit hit;
-                    if (Physics.Raycast(ray, out hit))
-                    {
-                        targetPosition = hit.point;
-                    }
-                }
-                if (Input.GetMouseButtonDown(0))
-                 {
-                     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                     RaycastHit hit;
-                     if (Physics.Raycast(ray, out hit))
-                     {
-                        targetPosition = hit.point;
-                     }
-                 }
             }
             else
             {

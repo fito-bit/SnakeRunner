@@ -28,7 +28,7 @@ public class Manager:MonoBehaviour
 
     void AddSnakePart()
     {
-        snake.GetComponent<Snake>().AddBodyPart();
+        snakeScript.AddBodyPart();
     }
 
     public void UpdateHumans()
@@ -41,8 +41,9 @@ public class Manager:MonoBehaviour
         humans.text = " Humans: " + humanCount;
     }
 
-    void EndFever()
+    IEnumerator EndFever()
     {
+        yield return new WaitForSeconds(5);
         crystalsCount = 0;
         crystals.text = " Crystals: " + crystalsCount;
         mov.speed /= 3;
@@ -52,13 +53,13 @@ public class Manager:MonoBehaviour
     
     void StartFever()
     {
-        mov = snakeScript.head.GetComponent<Movement>();
         Debug.Log("FeverStarted");
+        mov = snakeScript.head.GetComponent<Movement>();
         snakeScript.isFever = true;
         Transform startPos=snakeScript.head.transform;
         mov.speed *= 3;
         snakeScript.head.transform.position = new Vector3(0,0.5f,startPos.position.z);
-        Invoke("EndFever",5);
+        StartCoroutine(EndFever());
     }
 
     public void EndGame()
